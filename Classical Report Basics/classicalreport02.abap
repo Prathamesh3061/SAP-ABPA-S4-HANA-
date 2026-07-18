@@ -7,6 +7,7 @@ REPORT y195002r_classicalrpt.
 
 *created report for string operations
 
+* declaring variable.
 DATA : gv_char      TYPE string,
        gv_char1     TYPE string,
        gv_char2     TYPE string,
@@ -22,7 +23,7 @@ CONSTANTS : cv_firstname TYPE string VALUE 'prathamesh',
 
 SKIP.
 
-*CONCATENATE
+*CONCATENATE are used to join two different strings
 WRITE : 'concatenate'.
  SKIP.
 CONCATENATE cv_firstname cv_lastname INTO gv_char1 SEPARATED BY space.
@@ -161,7 +162,7 @@ ELSE.
 ENDIF.
 
 IF lv_string3 NS lv_string5.
-  WRITE: / sy-fdpos.
+  WRITE: / sy-fdpos. "system variable
 ELSE.
   WRITE: / sy-fdpos.
 ENDIF.
