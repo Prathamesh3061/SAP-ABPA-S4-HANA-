@@ -30,31 +30,31 @@ REPORT y195003r_classicalrpt.
 
 * CODE FOR CASE
 
-*DATA : gv_output TYPE i.
-*
-*PARAMETERS : p_num1 TYPE i,
-*             p_num2 TYPE i,
-*             p_sel  TYPE string.
-*
-*CASE p_sel.
-*  WHEN 'ADD' .
-*    gv_output = p_num1 + p_num2.
-*    WRITE : / gv_output.
-*  WHEN 'SUB' .
-*    gv_output = p_num1 - p_num2.
-*    WRITE : / gv_output.
-*  WHEN 'MULT'.
-*    gv_output = p_num1 * p_num2.
-*    WRITE : / gv_output.
-*  WHEN 'DIV'.
-*    gv_output = p_num1 / p_num2.
-*    WRITE : / gv_output.
-*  WHEN 'MOD'.
-*    gv_output = p_num1 MOD p_num2.
-*    WRITE : / gv_output.
-*  WHEN OTHERS.
-*    WRITE: 'select valid option'.
-*ENDCASE.
+DATA : gv_output TYPE i.
+
+PARAMETERS : p_num1 TYPE i,
+             p_num2 TYPE i,
+             p_sel  TYPE string.
+
+CASE p_sel.
+  WHEN 'ADD' .
+    gv_output = p_num1 + p_num2.
+    WRITE : / gv_output.
+  WHEN 'SUB' .
+    gv_output = p_num1 - p_num2.
+    WRITE : / gv_output.
+  WHEN 'MULT'.
+    gv_output = p_num1 * p_num2.
+    WRITE : / gv_output.
+  WHEN 'DIV'.
+    gv_output = p_num1 / p_num2.
+    WRITE : / gv_output.
+  WHEN 'MOD'.
+    gv_output = p_num1 MOD p_num2.
+    WRITE : / gv_output.
+  WHEN OTHERS.
+    WRITE: 'select valid option'.
+ENDCASE.
 
 
 *CODE FOR DO LOOP
